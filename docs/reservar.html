@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="reservar.css">
+  <title>Villa Atlantis - Reserva</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Villa Atlantis Logo" draggable="false" />
+    </div>
+    <nav>
+      <ul id="nav-items">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="hamburguer" id="hamburguer">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <header class="page-header">
+    Reservar Suíte
+  </header>
+
+  <section class="reserva-container">
+    <div id="info-suite">
+      <h2 id="suite-nome">Carregando suíte...</h2>
+      <img id="suite-img" src="" alt="Imagem da suíte" draggable="false" />
+    </div>
+
+    <form class="reserva-form">
+      <input type="hidden" id="suite" name="suite" />
+
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" />
+
+      <label for="checkin">Check-in</label>
+      <input type="date" id="checkin" name="checkin" required />
+
+      <label for="checkout">Check-out</label>
+      <input type="date" id="checkout" name="checkout" required />
+
+      <label for="hospedes">Número de Hóspedes</label>
+      <input type="number" id="hospedes" name="hospedes" min="1" max="10" />
+
+      <label for="observacoes">Observações</label>
+      <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+      <button type="submit">Confirmar Reserva</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Villa Atlantis. Todos os direitos reservados.</p>
+    <p>
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Política de Privacidade</a>
+      |
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Termos de Uso</a>
+      |
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="reservaModal" style="display:none;">
+    <div class="modal-content">
+      <h2>Reserva Confirmada!</h2>
+      <p>Obrigado por reservar conosco. Em breve entraremos em contato por e-mail.</p>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    const hamburguer = document.getElementById('hamburguer');
+    const navItems = document.getElementById('nav-items');
+
+    hamburguer.addEventListener('click', () => {
+      hamburguer.classList.toggle('active');
+      navItems.classList.toggle('active');
+    });
+
+    function setSuiteInfo() {
+      const params = new URLSearchParams(window.location.search);
+      const suite = params.get("suite");
+
+      const suitesData = {
+        "Suíte Coraline": "suite1.jpeg",
+        "Suíte Brisa d’Água": "suite2.jpg",
+        "Suíte Costa Azul": "suite3.jpg",
+        "Suíte Salina": "suite4.jpg",
+        "Suíte Laguna": "suite5.avif",
+        "Suíte Riviera": "suite6.jpg",
+      };
+
+      const suiteNomeEl = document.getElementById("suite-nome");
+      const suiteImgEl = document.getElementById("suite-img");
+      const inputSuite = document.getElementById("suite");
+
+      if (suite && suitesData[suite]) {
+        suiteNomeEl.textContent = suite;
+        suiteImgEl.src = "img/" + suitesData[suite];
+        suiteImgEl.alt = `Imagem da ${suite}`;
+        inputSuite.value = suite;
+      } else {
+        suiteNomeEl.textContent = "Suíte não encontrada";
+        suiteImgEl.src = "";
+        suiteImgEl.alt = "";
+        inputSuite.value = "";
+      }
+    }
+
+    window.onload = setSuiteInfo;
+
+    const form = document.querySelector('.reserva-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const dados = {
+        suite: document.getElementById('suite').value,
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        telefone: document.getElementById('telefone').value,
+        checkin: document.getElementById('checkin').value,
+        checkout: document.getElementById('checkout').value,
+        hospedes: document.getElementById('hospedes').value,
+        observacoes: document.getElementById('observacoes').value
+      };
+
+      fetch('https://6831d7496205ab0d6c3dd3f1.mockapi.io/api/v1/e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erro ao enviar reserva");
+        }
+        return response.json();
+      })
+      .then(data => {
+        document.getElementById('reservaModal').style.display = 'flex';
+        form.reset();
+      })
+      .catch(error => {
+        alert("Ocorreu um erro ao enviar a reserva. Tente novamente.");
+        console.error(error);
+      });
+    });
+
+    function fecharModal() {
+      document.getElementById('reservaModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

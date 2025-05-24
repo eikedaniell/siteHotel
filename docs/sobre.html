@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="sobre.css">
+  <title>Villa Atlantis - Institucional</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Villa Atlantis Logo" draggable="false" />
+    </div>
+    <nav>
+      <ul id="nav-items">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="hamburguer" id="hamburguer">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Título da página -->
+  <header class="page-header">
+    Sobre a Villa Atlantis
+  </header>
+
+  <main class="content">
+
+    <section>
+      <h2>História</h2>
+      <p>
+        Fundada em 1998, a Villa Atlantis nasceu do sonho de oferecer uma experiência única de hospedagem à beira-mar. Situada em uma região paradisíaca, a pousada foi construída com muito carinho e dedicação, respeitando a natureza local e a cultura da região. Desde o início, prezamos pelo conforto e pela tranquilidade dos nossos hóspedes, buscando sempre criar um ambiente acolhedor e familiar.
+      </p>
+    </section>
+
+    <section>
+      <h2>Filosofia</h2>
+      <p>
+        Nossa filosofia é baseada na hospitalidade genuína, sustentabilidade e atenção aos detalhes. Acreditamos que cada hóspede merece uma experiência personalizada, onde o respeito ao meio ambiente e à cultura local caminham lado a lado com o conforto e o luxo acessível. Buscamos oferecer serviços que promovam bem-estar, tranquilidade e uma conexão verdadeira com a natureza e a cultura da região.
+      </p>
+    </section>
+
+    <section>
+      <h2>Localização</h2>
+      <p>
+        A Villa Atlantis está localizada no coração da Costa Atlântica, em uma área privilegiada próxima à praia, com fácil acesso às principais atrações turísticas e à cidade. Nosso endereço é Rua das Ondas, 123, Praia do Sol, Município de Atlantis.
+      </p>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.540388765295!2d-44.56763528839589!3d-2.7883002890857296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNDYnMTcuMSJNWDDsIzI2JzUxLjgiRQ!5e0!3m2!1spt-BR!2sbr!4v1687067783299!5m2!1spt-BR!2sbr"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Villa Atlantis"
+        ></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background-color: #800020; color: white; text-align: center; padding: 20px 10px; margin-top: 60px;">
+    <p>© 2025 Villa Atlantis. Todos os direitos reservados.</p>
+    <p>
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Política de Privacidade</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Termos de Uso</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+
+  <script>
+    // Toggle menu mobile
+    const hamburguer = document.getElementById('hamburguer');
+    const navItems = document.getElementById('nav-items');
+
+    hamburguer.addEventListener('click', () => {
+      hamburguer.classList.toggle('active');
+      navItems.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

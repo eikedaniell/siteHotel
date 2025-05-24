@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="servicos.css">
+  <title>Villa Atlantis - Suítes</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Villa Atlantis Logo" draggable="false" />
+    </div>
+    <nav>
+      <ul id="nav-items">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="hamburguer" id="hamburguer">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Cabeçalho da página -->
+  <header class="page-header">
+    Nossas Suítes
+  </header>
+
+  <!-- Lista das suítes -->
+  <section class="suites-container">
+
+    <article class="suite-card">
+      <img src="img/suite1.jpeg" alt="Suíte Coraline" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Coraline</h3>
+        <p>Ambiente aconchegante com decoração inspirada no mar e conforto para suas férias.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 450,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Coraline&img=suite1.jpeg">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite-card">
+      <img src="img/suite2.jpg" alt="Suíte Brisa d’Água" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Brisa d’Água</h3>
+        <p>Vista panorâmica e decoração moderna para momentos inesquecíveis à beira-mar.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 520,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Brisa%20d’Água&img=suite2.jpg">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite-card">
+      <img src="img/suite3.jpg" alt="Suíte Costa Azul" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Costa Azul</h3>
+        <p>Espaço amplo, ideal para famílias, com detalhes que valorizam a natureza local.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 480,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Costa%20Azul&img=suite3.jpg">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite-card">
+      <img src="img/suite4.jpg" alt="Suíte Salina" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Salina</h3>
+        <p>Design elegante e ambiente tranquilo para relaxar e apreciar a paisagem.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 470,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Salina&img=suite4.jpg">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite-card">
+      <img src="img/suite5.avif" alt="Suíte Laguna" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Laguna</h3>
+        <p>Ambiente sofisticado com detalhes rústicos e vista privilegiada para a lagoa.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 500,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Laguna&img=suite5.avif">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="suite-card">
+      <img src="img/suite6.jpg" alt="Suíte Riviera" draggable="false" />
+      <div class="suite-info">
+        <h3>Suíte Riviera</h3>
+        <p>Luxo e conforto combinados para proporcionar uma experiência inesquecível.</p>
+        <div class="suite-footer">
+          <span class="price">R$ 530,00 / diária</span>
+          <a class="btn-reservar" href="reservar.html?suite=Suíte%20Riviera&img=suite6.jpg">Reservar</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <footer style="background-color: #800020; color: white; text-align: center; padding: 20px 10px; margin-top: 60px;">
+    <p>© 2025 Villa Atlantis. Todos os direitos reservados.</p>
+    <p>
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Política de Privacidade</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Termos de Uso</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+
+  <script>
+    // Toggle menu mobile
+    const hamburguer = document.getElementById('hamburguer');
+    const navItems = document.getElementById('nav-items');
+
+    hamburguer.addEventListener('click', () => {
+      hamburguer.classList.toggle('active');
+      navItems.classList.toggle('active');
+    });
+  </script>
+  
+</body>
+</html>

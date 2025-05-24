@@ -1,0 +1,233 @@
+ /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+          
+      
+        background-size: cover; 
+      font-family: Arial, sans-serif;
+      background-color: #fcf5ef;
+      color: #333;
+      min-height: 100vh;
+        background-repeat: no-repeat;  /* Evita repetição da imagem */
+  background-position: center;   /* Centraliza a imagem */
+}
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      background-color: #800020;
+    }
+
+    .navbar .logo img {
+      height: 55px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffffff;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger menu para mobile */
+    @media (max-width: 768px) {
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #67001a;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 0 0 0 10px;
+        z-index: 20;
+      }
+      .navbar ul.active {
+        display: flex;
+      }
+      .hamburguer {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: relative;
+        z-index: 30;
+      }
+      .hamburguer div {
+        position: absolute;
+        height: 3px;
+        background: white;
+        width: 100%;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .hamburguer div:nth-child(1) {
+        top: 0;
+      }
+      .hamburguer div:nth-child(2) {
+        top: 11px;
+      }
+      .hamburguer div:nth-child(3) {
+        bottom: 0;
+      }
+      .hamburguer.active div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 11px;
+      }
+      .hamburguer.active div:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburguer.active div:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 11px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .hamburguer {
+        display: none;
+      }
+    }
+
+    /* Cabeçalho da página */
+    header.page-header {
+      padding: 100px 20px 40px; /* pra não ficar embaixo da navbar */
+      text-align: center;
+      background-color: transparent;
+      color: #800020;
+      font-weight: bold;
+      font-size: 2.8rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
+    }
+
+    /* Container das suítes */
+    .suites-container {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 30px;
+    }
+
+    /* Card de cada suíte */
+    .suite-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+    .suite-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Foto da suíte */
+    .suite-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* Conteúdo da suíte */
+    .suite-info {
+      padding: 15px 20px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .suite-info h3 {
+      color: #800020;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .suite-info p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      line-height: 1.4;
+    }
+
+    /* Preço + botão reservar */
+    .suite-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .price {
+      color: #800020;
+      font-weight: 700;
+      font-size: 1.3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .btn-reservar {
+      background-color: #800020;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .btn-reservar:hover {
+      background-color: #a00030;
+    }

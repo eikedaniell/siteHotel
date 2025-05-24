@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="inicio.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Villa Atlantis</title>
+</head>
+<body>
+
+  <!-- 1. Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Villa Atlantis Logo" draggable="false" />
+    </div>
+    <nav>
+      <ul id="nav-items">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="hamburguer" id="hamburguer">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- 2. Banner -->
+  <section class="banner" id="banner">
+    <img src="img/banner.avif" alt="Banner do Hotel" draggable="false" />
+    <div class="banner-texto" id="banner-texto">
+      <h1>Um refúgio acolhedor em meio ao litoral encantador.</h1>
+      <p>Atendimento familiar, charme das suítes e vista para o mar.</p>
+      <a href="servicos.html" class="btn-conheca">Conheça as suítes</a>
+    </div>
+  </section>
+
+  <!-- 3. Conteúdo principal -->
+  <main class="conteudo">
+
+    <!-- 4. Apresentação do negócio -->
+    <section class="apresentacao-negocio" id="apresentacao">
+      <h2>Bem-vindo ao Villa Atlantis</h2>
+      <p>
+        No Villa Atlantis, oferecemos uma experiência única e inesquecível para você e sua família.  
+        Situado em um cenário paradisíaco à beira-mar, nosso hotel combina conforto, charme e um atendimento familiar dedicado para que sua estadia seja perfeita.
+      </p>
+
+      <div class="destaques">
+        <div class="item-destaque">
+          <span class="emoji" aria-label="localização">📍</span>
+          <h3>Localização Privilegiada</h3>
+          <p>Perto das melhores praias e pontos turísticos da região.</p>
+        </div>
+        <div class="item-destaque">
+          <span class="emoji" aria-label="suítes">🛏️</span>
+          <h3>Suítes Confortáveis</h3>
+          <p>Ambientes climatizados e decorados com charme para seu descanso.</p>
+        </div>
+        <div class="item-destaque">
+          <span class="emoji" aria-label="atendimento">🤝</span>
+          <h3>Atendimento Familiar</h3>
+          <p>Equipe dedicada para fazer você se sentir em casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Seção suítes -->
+    <section id="suites">
+      <h2>Descubra o paraíso à beira-mar</h2>
+      <p>
+        Localizado no litoral, o Villa Atlantis oferece uma experiência única para quem busca
+        tranquilidade, conforto e contato direto com a natureza marítima. Aproveite nossos serviços exclusivos,
+        vista privilegiada para o mar e um ambiente acolhedor que vai fazer você se sentir em casa.
+      </p>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer style="background-color: #800020; color: white; text-align: center; padding: 20px 10px; margin-top: 60px;">
+    <p>© 2025 Villa Atlantis. Todos os direitos reservados.</p>
+    <p>
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Política de Privacidade</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Termos de Uso</a> | 
+      <a href="#" style="color: #f7e9e9; text-decoration: none; margin: 0 10px;">Contato</a>
+    </p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    //Controla a altura fixa do banner
+    window.addEventListener("load", () => {
+      const banner = document.getElementById("banner");
+      const alturaInicial = window.innerHeight;
+      banner.style.height = alturaInicial + "px";
+    });
+
+    // Controla a cor da navbar ao rolar
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    // Controla o menu hamburguer no mobile
+    const hamburguer = document.getElementById("hamburguer");
+    const navItems = document.getElementById("nav-items");
+
+    hamburguer.addEventListener("click", () => {
+      hamburguer.classList.toggle("active");
+      navItems.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
