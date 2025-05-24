@@ -3,7 +3,7 @@
 **I. Informações Gerais**
 
 - Este código foi criado em 2025 como parte de um projeto acadêmico de desenvolvimento web com foco em aplicações front-end e práticas de usabilidade;
-- Consiste na criação de um site institucional para a Pousada Villa Atlantis, utilizando HTML, CSS e integração com uma API simulada para gerenciar dados de suítes e reservas.
+- Consiste em site institucional para a Pousada Villa Atlantis, utilizando HTML, CSS e integração com uma API simulada para gerenciar dados de suítes e reservas.
 - O site inclui funcionalidades interativas como menu responsivo, navegação dinâmica, mapa interativo da localização e formulário de reservas ajustável conforme a escolha do usuário.
 
 **II. Informações Adicionais**
