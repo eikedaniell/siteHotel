@@ -1,5 +1,7 @@
 # siteHotel
 
+<img width="1897" height="907" alt="Captura de tela 2026-08-06 144536" src="https://github.com/user-attachments/assets/b3d0e5be-e60c-465c-8458-4aba0dd514c1" />
+
 https://eikedaniell.github.io/siteHotel/index.html
 
 **I. Informações Gerais**
