@@ -44,6 +44,6 @@ O projeto foi criado em **2025** como protótipo plenamente funcional, podendo s
 ## 📂 Estrutura do Projeto
 
 ```text
-├── BackEndJAVA     # Página principal da pousada
-├── README.md        # Documentação do repositório
-└── ...              # Arquivos de estilo (CSS), scripts (JS) e ativos (imagens)
+├── BackendJava    # Página principal da pousada
+├── docs
+└── README.md  
