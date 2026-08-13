@@ -1,24 +1,49 @@
-# siteHotel
+# 🏨 Pousada Villa Atlantis
 
-<img width="1897" height="907" alt="Captura de tela 2026-08-06 144536" src="https://github.com/user-attachments/assets/b3d0e5be-e60c-465c-8458-4aba0dd514c1" />
+> **Website institucional responsivo com integração a API simulada para gestão de suítes e reservas.**
 
-https://eikedaniell.github.io/siteHotel/index.html
+<p align="center">
+  <img width="1897" height="907" alt="Demonstração da Pousada Villa Atlantis" src="https://github.com/user-attachments/assets/b3d0e5be-e60c-465c-8458-4aba0dd514c1" />
+</p>
 
-**I. Informações Gerais**
+---
 
-- Este código foi criado em 2025 como parte de um projeto acadêmico de desenvolvimento web com foco em aplicações front-end e práticas de usabilidade;
-- Consiste em um site institucional para a Pousada Villa Atlantis, utilizando HTML, CSS e integração com uma API simulada para gerenciar dados de suítes e reservas.
-- O site inclui funcionalidades interativas como menu responsivo, navegação dinâmica, mapa interativo da localização e formulário de reservas ajustável conforme a escolha do usuário.
+## 🔗 Link de Acesso
 
-**II. Informações Adicionais**
+Acesse e teste a plataforma diretamente no seu navegador:  
+👉 **[Acessar site](https://eikedaniell.github.io/siteHotel/)**
 
-- Embora desenvolvido como um protótipo, o site encontra-se plenamente funcional, podendo ser facilmente adaptado e publicado em ambiente real;
-- Foram utilizadas tecnologias exclusivamente de front-end, além da MockAPI para simulação de dados e integração com o Google Maps para o recurso de mapa interativo.
+---
 
-**III. Habilidades Adquiridas**
+## 📌 Sobre o Projeto
 
-- Desenvolvimento e estilização de websites com HTML e CSS;
-- Implementação de design responsivo e interativo;
-- Integração com APIs REST simuladas (MockAPI);
-- Incorporação de serviços externos como Google Maps;
-- Organização e controle de versões com Git.
+O **Pousada Villa Atlantis** é um site institucional desenvolvido como parte de um projeto acadêmico de desenvolvimento web. A aplicação foca em boas práticas de front-end, usabilidade e experiência do usuário (UX/UI), oferecendo uma interface interativa para navegação por acomodações e simulação de reservas.
+
+O projeto foi criado em **2025** como protótipo plenamente funcional, podendo ser facilmente adaptado para um ambiente de produção real.
+
+---
+
+## 🚀 Funcionalidades
+
+- **🏨 Catálogo de Suítes:** Exibição dinâmica e detalhada das acomodações disponíveis.
+- **📅 Formulário de Reservas Ajustável:** Interface interativa configurável conforme a escolha de datas e acomodação do usuário.
+- **🗺️ Mapa Interativo:** Integração com Google Maps para visualização e navegação até a localização da pousada.
+- **📱 Design Responsivo:** Layout adaptável para desktops, tablets e smartphones com menu navegável otimizado.
+
+---
+
+## 🛠️ Tecnologias e Ferramentas Utilizadas
+
+- **HTML5 & CSS3** — Estruturação e estilização visual moderna.
+- **JavaScript (ES6+)** — Manipulação de DOM, requisições HTTP e interatividade da interface.
+- **MockAPI** — Simulação de API RESTful para gerenciamento de dados de suítes e reservas.
+- **Google Maps API / Embed** — Localização e mapa interativo na plataforma.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+├── index.html       # Página principal da pousada
+├── README.md        # Documentação do repositório
+└── ...              # Arquivos de estilo (CSS), scripts (JS) e ativos (imagens)
